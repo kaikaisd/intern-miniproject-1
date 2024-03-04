@@ -1,5 +1,5 @@
 import mysql from "mysql2/promise";
-import fs from "fs";
+//import fs from "fs";
 
 const connection = mysql.createPool({
   host: "localhost",

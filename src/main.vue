@@ -20,6 +20,7 @@
 
 <script>
 import Api from './js/Api_gql.js';
+import VMdEditor from '@kangc/v-md-editor';
 export default {
   name: 'Main',
   data() {
@@ -33,6 +34,10 @@ export default {
   },
   methods: {
     submitForm(formData) {
+      if (formData.title == "" || formData.contents == ""){
+        alert("Please fill in the title and contents");
+        return;
+      }
       Api.addItem(formData.title, formData.contents).then((data) => {
         if (data !== null){
           location.reload();
@@ -41,12 +46,15 @@ export default {
     },
     updateForm(formData) {
       Api.editItem(formData.id, formData.title ,formData.contents).then((data) => {
+        alert("Update successfully");
+        location.reload();
         console.log(data);
       })
     },
     deleteDM(formData) {
       Api.deleteItem(formData.id).then((data) => {
-        console.log(data);
+        alert("Delete successfully");
+        
       })
     }
   },

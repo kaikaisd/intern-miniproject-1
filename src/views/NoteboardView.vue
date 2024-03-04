@@ -6,13 +6,13 @@
                 <label for="title" class="block text-lg font-semibold text-gray-700">Title</label>
                 <input type="text" id="title" name="title"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
-                    placeholder="Enter title here" v-model="localFormData.title" :readonly="isReadonly">
+                    placeholder="Enter title here" v-model="localFormData.title" :readonly="isReadonly" :required="!isReadonly">
             </div>
 
             <!-- Markdown Input -->
             <div class="mb-4">
                 <label for="markdownInput" class="block text-lg font-semibold text-gray-700">Contents</label>
-                <v-md-editor v-model="localFormData.contents" height="400px" name="markdownInput"></v-md-editor>
+                <v-md-editor v-model="localFormData.contents" height="400px" id="markdownInput" name="markdownInput"></v-md-editor>
 
             </div>
 
@@ -24,7 +24,7 @@
 
                     <button type="button"
                         class="flex-1 h-14 text-center bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-5 rounded"
-                        v-show="isReadonly"  @click="$emit('deleteDM', localFormData)">Delete</button>
+                        v-show="isReadonly" id="deleteButton"  @click="$emit('deleteDM', localFormData)">Delete</button>
                 </div>
                 <div v-else>
                     <button type="submit"
