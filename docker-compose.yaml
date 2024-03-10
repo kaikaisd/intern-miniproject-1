@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: node:latest
+    image: node:16.13.0
     container_name: nodejs-app
     volumes:
       - .:/app
