@@ -12,7 +12,8 @@ services:
     working_dir: /app
     environment:
       - NODE_ENV=development
-    command: sh -c "npm config set cache /tmp --global && npm install && npm start"
+
+    command: sh -c "npm config set cache /tmp --global && npm install && chmod 777 /app/node_modules && npm start"
     depends_on:
       - db
 
