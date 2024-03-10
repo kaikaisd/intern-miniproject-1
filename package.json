@@ -10,12 +10,6 @@
     "dev": "vite",
     "build": "vite build"
   },
-  "browserslist": [
-    "IOS >= 15",
-    "Safari >= 15",
-    "last 5 Chrome versions",
-    "last 5 Firefox versions"
-  ],
   "dependencies": {
     "@apollo/client": "^3.8.10",
     "@kangc/v-md-editor": "^2.3.18",
@@ -32,7 +26,7 @@
     "react": "^18.2.0",
     "sequelize": "^6.35.2",
     "tailwindcss": "^3.4.1",
-    "vite": "^5.0.12",
+    "vite": "^3.2.8",
     "vite-plugin-mix": "^0.4.0",
     "vite-plugin-vue": "^0.0.1",
     "vite-plugin-vue2": "^2.0.3",
