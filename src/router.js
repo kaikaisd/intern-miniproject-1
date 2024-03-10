@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import NoteBoardView from "./views/NoteBoardView.vue";
+import NoteBoardView from "./views/NoteboardView.vue";
 import ListNote from "./views/ListNote.vue";
 
 export const router = createRouter({

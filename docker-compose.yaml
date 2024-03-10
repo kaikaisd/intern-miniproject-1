@@ -9,6 +9,7 @@ services:
       - /app/node_modules
     ports:
       - "8000:8000"
+      - "5173:5173"
     working_dir: /app
     environment:
       - NODE_ENV=development
