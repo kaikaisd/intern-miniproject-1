@@ -13,7 +13,6 @@ services:
     working_dir: /app
     environment:
       - NODE_ENV=development
-
     command: sh -c "npm config set cache /tmp --global && npm install && chmod 777 /app/node_modules && npm start"
     depends_on:
       - db
@@ -25,11 +24,12 @@ services:
       MYSQL_DATABASE: 'notebook'
       MYSQL_USER: 'notebook'
       MYSQL_PASSWORD: 'pwd12345'
-      
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    
     ports:
       - "3306:3306"
     volumes:
+      - ./init:/docker-entrypoint-initdb.d
       - db-data:/var/lib/mysql
 
 volumes:
