@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "npm run dev",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build"
   },
   "dependencies": {
